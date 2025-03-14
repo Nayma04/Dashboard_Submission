@@ -1,4 +1,3 @@
-from babel.numbers import format_currency
 import numpy as np
 import pandas as pd
 import seaborn as sns
