@@ -11,15 +11,15 @@ st.write(
     """
 )
 
-# 📥 **Load Data**
-day_df = pd.read_csv(r"C:/Users/Lenovo/Documents/Kuliah/Semester 6/Dicoding/Penyewaan_Sepeda.csv")
+# 📥 Load Data
+day_df = pd.read_csv("Penyewaan_Sepeda.csv")
 
-# 🎯 **Konversi kolom tanggal**
+# 🎯 Konversi kolom tanggal
 day_df["date"] = pd.to_datetime(day_df["date"])
 min_date = day_df["date"].min()
 max_date = day_df["date"].max()
 
-# 🎛 **Sidebar Filter**
+# 🎛 Sidebar Filter
 with st.sidebar:
     st.header("📅 Filter Data")
     # Data total penyewaan berdasarkan musim
