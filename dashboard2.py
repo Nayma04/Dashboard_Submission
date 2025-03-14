@@ -1,3 +1,12 @@
+import subprocess
+
+# Cek dan install seaborn jika belum ada
+try:
+    import seaborn
+except ModuleNotFoundError:
+    subprocess.run(["pip", "install", "seaborn"])
+    import seaborn
+
 import numpy as np
 import pandas as pd
 import seaborn as sns
